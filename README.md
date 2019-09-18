@@ -16,11 +16,11 @@ Inside your .vue component:
 
 ```javascript
 <template>
- <!-- ... -->
- <vue-video-hero videoId="_XcsNhdz-kM">
- <!-- https://youtu.be/[_XcsNhdz-kM] <-- this is the id-->
+  // ...
+  <vue-video-hero videoId="_XcsNhdz-kM">
+ // https://youtu.be/[_XcsNhdz-kM] <-- this is the id
   <template #content>
-    <!-- Put your content here -->
+    // Put your content here
   </template>
  </vue-video-hero>
 </template>
