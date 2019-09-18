@@ -1,35 +1,31 @@
-<script>
-export default {
-    name: 'VueVideoHero', // vue component name
-    data() {
-        return {
-            counter: 5,
-            initCounter: 5,
-        };
-    },
-}
-</script>
-
 <template>
-    <div class="vue-video-hero">
-        <p>The counter is set to <b>{{counter}}</b>.</p>
-        <button @click="counter += 1">Click +1</button>
-        <button @click="counter -= 1">Click -1</button>
-        <button @click="counter = initCounter">Reset</button>
+  <section class="hero is-large">
+    <figure class="image is-16by9">
+      <iframe
+        class="has-ratio"
+        :src="
+          `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&loop=1&mute=1&disablekb=1iv_load_policy=3&modestbranding=1&playsinline=1&rel=0`
+        "
+        frameborder="0"
+        allow="autoplay"
+      ></iframe>
+    </figure>
+    <div class="is-overlay">
+      <div class="hero-body">
+        <div class="container">
+          <slot name="content"></slot>
+        </div>
+      </div>
     </div>
+  </section>
 </template>
 
-<style scoped>
-    .vue-video-hero {
-        display: block;
-        width: 400px;
-        margin: 25px auto;
-        border: 1px solid #ccc;
-        background: #eaeaea;
-        text-align: center;
-        padding: 25px;
-    }
-    .vue-video-hero p {
-        margin: 0 0 1em;
-    }
-</style>
+<script>
+export default {
+  props: {
+    videoId: String
+  }
+};
+</script>
+
+<style scoped></style>
