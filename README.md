@@ -39,6 +39,8 @@ components: {
 
 # Defaults
 
+_Currently unchangeable_
+
 - Auto play on all devices (except iOS < 10)
 - Muted audio
 - Loops automatically (the video never ends)
