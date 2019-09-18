@@ -1,7 +1,7 @@
 {
   "name": "vue-video-hero",
   "version": "1.0.0",
-  "description": "A responsive video section with content overlay",
+  "description": "A responsive video section with content overlay, all with sensible defaults",
   "author": {
     "name": "Karim Daghari"
   },
