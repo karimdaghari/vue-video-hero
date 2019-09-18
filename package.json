@@ -16,6 +16,13 @@
     "youtube"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/kdaghari/vue-video-hero",
+  "repository": {
+    "url": "https://github.com/kdaghari/vue-video-hero"
+  },
+  "bugs": {
+    "url": "https://github.com/kdaghari/vue-video-hero/issues"
+  },
   "main": "dist/vue-video-hero.ssr.js",
   "module": "dist/vue-video-hero.esm.js",
   "unpkg": "dist/vue-video-hero.min.js",
