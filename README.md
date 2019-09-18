@@ -2,7 +2,7 @@
 
 This is a responsive video section with content overlay. In other other words, this is a responsive hero section with a video as background that you can overlay content on top of.
 
-**It currently supports youtube only.**
+**It currently supports YouTube only.**
 
 # How to use it?
 
