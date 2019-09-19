@@ -27,6 +27,16 @@ export default {
     return {
       player: `https://www.youtube.com/embed/${this.videoId}?autoplay=1&controls=0&loop=1&mute=1&disablekb=1iv_load_policy=3&modestbranding=1&playsinline=1&rel=0`
     };
+  },
+  computed: {
+    playerType: function() {
+      const provider = this.source.toLowerCase();
+      if (provider === "youtube") {
+        return `https://www.youtube.com/embed/${this.videoId}?autoplay=1&controls=0&loop=1&mute=1&disablekb=1iv_load_policy=3&modestbranding=1&playsinline=1&rel=0`;
+      } else if (provider === "vimeo") {
+        return "";
+      }
+    }
   }
 };
 </script>
