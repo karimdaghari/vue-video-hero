@@ -23,6 +23,9 @@
 <script>
 export default {
   props: {
+    /**
+     * @param {String} videoId - The id of the YouTube video
+     */
     videoId: String
   }
 };
