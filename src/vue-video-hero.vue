@@ -17,9 +17,11 @@
 export default {
   props: {
     /**
-     * @param {String} videoId - The id of the YouTube video
+     * @param {String} videoId - The id of the video
+     * @param {String} source - The source of the video: YouTube or Vimeo. Casing doesn't matter.
      */
-    videoId: String
+    videoId: String,
+    source: String
   },
   data() {
     return {
