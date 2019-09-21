@@ -33,7 +33,7 @@ export default {
       if (this.provider === "youtube") {
         return `https://www.youtube.com/embed/${this.videoId}?autoplay=1&controls=0&loop=1&mute=1&disablekb=1iv_load_policy=3&modestbranding=1&playsinline=1&rel=0`;
       } else if (this.provider === "vimeo") {
-        return "";
+        return `https://player.vimeo.com/video/${this.videoId}`;
       }
     }
   }
