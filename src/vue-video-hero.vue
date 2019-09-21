@@ -1,7 +1,21 @@
 <template>
   <section class="hero is-large">
     <figure class="image is-16by9">
-      <iframe class="has-ratio" :src="player" frameborder="0" allow="autoplay"></iframe>
+      <iframe
+        class="has-ratio"
+        :src="player"
+        frameborder="0"
+        allow="autoplay"
+        v-if="provider === 'youtube'"
+      ></iframe>
+
+      <vimeo-player
+        v-if="provider === 'vimeo'"
+        ref="vPlayer"
+        :video-id="videoId"
+        @ready="onReady"
+        :option="vOptions"
+      ></vimeo-player>
     </figure>
     <div class="is-overlay">
       <div class="hero-body">
@@ -14,7 +28,12 @@
 </template>
 
 <script>
+import { vueVimeoPlayer } from "vue-vimeo-player";
+
 export default {
+  components: {
+    vueVimeoPlayer
+  },
   props: {
     /**
      * @param {String} videoId - The id of the video
@@ -25,7 +44,8 @@ export default {
   },
   data() {
     return {
-      provider: this.source
+      provider: this.source,
+      vOptions: {}
     };
   },
   computed: {
@@ -35,6 +55,19 @@ export default {
       } else if (this.provider === "vimeo") {
         return `https://player.vimeo.com/video/${this.videoId}`;
       }
+    }
+  },
+  methods: {
+    onReady: function() {
+      const options = {
+        background: true,
+        byline: false,
+        muted: true,
+        playsinline: true,
+        portrait: false,
+        title: false
+      };
+      Object.assign(this.vOptions, options);
     }
   }
 };
