@@ -2,7 +2,7 @@
 
 This is a responsive video section with content overlay. In other other words, this is a responsive hero section with a video as background that you can overlay content on top of.
 
-**It currently supports YouTube only.**
+**It supports YouTube and Vimeo.**
 
 # How to use it?
 
@@ -17,8 +17,11 @@ Inside your .vue component:
 ```javascript
 <template>
   // ...
-  <vue-video-hero videoId="_XcsNhdz-kM">
+  <vue-video-hero source="youtube || vimeo" videoId="_XcsNhdz-kM">
+  // For YouTube:
  // https://youtu.be/[_XcsNhdz-kM] <-- this is the id
+ // For Vimeo:
+ // https://vimeo.com/[123456789] <-- this is the id
   <template #content>
     // Put your content here
   </template>
@@ -44,4 +47,3 @@ _Currently unchangeable_
 - Auto play on all devices (except iOS < 10)
 - Muted audio
 - Loops automatically (the video never ends)
-- Almost no branding
