@@ -39,8 +39,8 @@ export default {
      * @param {String} videoId - The id of the video
      * @param {String} source - The source of the video: YouTube or Vimeo. Casing doesn't matter.
      */
-    videoId: String,
-    source: String
+    videoId: { type: String, required: true },
+    source: { type: String, required: true }
   },
   data() {
     return {
