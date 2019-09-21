@@ -38,7 +38,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "bulma": "^0.7.5"
+    "bulma": "^0.7.5",
+    "vue-vimeo-player": "0.0.10"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
