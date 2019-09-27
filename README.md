@@ -30,11 +30,11 @@ Inside your .vue component:
 
 <script>
 // ...
-import vue-video-hero from 'vue-video-hero'
+import VueVideoHero from 'vue-video-hero'
 // ...
 components: {
   // ...
-  vue-video-hero,
+  VueVideoHero,
 }
 // ...
 </script>
